@@ -1,10 +1,15 @@
 package tn.esprit.arctic.demo1.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 @Entity
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Composant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

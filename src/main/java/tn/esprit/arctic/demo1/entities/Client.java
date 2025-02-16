@@ -1,13 +1,18 @@
 package tn.esprit.arctic.demo1.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
 import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
