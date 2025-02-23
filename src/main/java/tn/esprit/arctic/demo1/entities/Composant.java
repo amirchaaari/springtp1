@@ -17,7 +17,8 @@ public class Composant {
 
     private String nomComposant;
     private Float prix;
-
+    @Enumerated(EnumType.STRING)
+    private TypeComposant typeComposant;
     @OneToOne()
    private DetailComposant detailComposant;
     // Getters and Setters

@@ -7,5 +7,4 @@ import tn.esprit.arctic.demo1.entities.Client;
 public interface ClientRepo extends JpaRepository<Client,Long> {
 
 
-
 }
