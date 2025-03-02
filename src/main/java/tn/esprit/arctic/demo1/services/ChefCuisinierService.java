@@ -1,16 +1,17 @@
 package tn.esprit.arctic.demo1.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.demo1.entities.ChefCuisinier;
 import tn.esprit.arctic.demo1.repositories.ChefCuisinierRepo;
 import java.util.List;
+@AllArgsConstructor
 
+@Service
 public class ChefCuisinierService implements IChefCuisinierService {
 
-    private final ChefCuisinierRepo chefCuisinierRepo;
+    private  ChefCuisinierRepo chefCuisinierRepo;
 
-    public ChefCuisinierService(ChefCuisinierRepo chefCuisinierRepo) {
-        this.chefCuisinierRepo = chefCuisinierRepo;
-    }
 
     @Override
     public ChefCuisinier saveChefCuisinier(ChefCuisinier chefCuisinier) {

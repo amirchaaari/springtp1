@@ -1,16 +1,16 @@
 package tn.esprit.arctic.demo1.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.demo1.entities.ChaineRestauration;
 import tn.esprit.arctic.demo1.repositories.ChaineRestaurationRepo;
 import java.util.List;
+@Service
+@AllArgsConstructor
 
 public class ChaineRestaurationService implements IChaineRestaurationService {
 
-    private final ChaineRestaurationRepo chaineRestaurationRepo;
-
-    public ChaineRestaurationService(ChaineRestaurationRepo chaineRestaurationRepo) {
-        this.chaineRestaurationRepo = chaineRestaurationRepo;
-    }
+    private  ChaineRestaurationRepo chaineRestaurationRepo;
 
     @Override
     public ChaineRestauration saveChaineRestauration(ChaineRestauration chaineRestauration) {

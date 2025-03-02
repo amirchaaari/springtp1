@@ -1,16 +1,17 @@
 package tn.esprit.arctic.demo1.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.demo1.entities.Composant;
 import tn.esprit.arctic.demo1.repositories.ComposantRepo;
 import java.util.List;
+@Service
+@AllArgsConstructor
 
 public class ComposantService implements IComposantService {
 
-    private final ComposantRepo composantRepo;
+    private  ComposantRepo composantRepo;
 
-    public ComposantService(ComposantRepo composantRepo) {
-        this.composantRepo = composantRepo;
-    }
 
     @Override
     public Composant saveComposant(Composant composant) {

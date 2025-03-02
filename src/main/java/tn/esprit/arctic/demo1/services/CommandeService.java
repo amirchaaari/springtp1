@@ -1,16 +1,17 @@
 package tn.esprit.arctic.demo1.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.demo1.entities.Commande;
 import tn.esprit.arctic.demo1.repositories.CommandeRepo;
 import java.util.List;
+@Service
+@AllArgsConstructor
 
 public class CommandeService implements ICommandeService {
 
-    private final CommandeRepo commandeRepo;
+    private  CommandeRepo commandeRepo;
 
-    public CommandeService(CommandeRepo commandeRepo) {
-        this.commandeRepo = commandeRepo;
-    }
 
     @Override
     public Commande saveCommande(Commande commande) {

@@ -1,16 +1,17 @@
 package tn.esprit.arctic.demo1.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.demo1.entities.Restaurant;
 import tn.esprit.arctic.demo1.repositories.RestaurantRepo;
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class RestaurantService implements IRestaurantService {
 
-    private final RestaurantRepo restaurantRepo;
+    private  RestaurantRepo restaurantRepo;
 
-    public RestaurantService(RestaurantRepo restaurantRepo) {
-        this.restaurantRepo = restaurantRepo;
-    }
+
 
     @Override
     public Restaurant saveRestaurant(Restaurant restaurant) {

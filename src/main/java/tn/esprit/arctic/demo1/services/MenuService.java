@@ -1,16 +1,17 @@
 package tn.esprit.arctic.demo1.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.demo1.entities.Menu;
 import tn.esprit.arctic.demo1.repositories.MenuRepo;
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class MenuService implements IMenuService {
 
-    private final MenuRepo menuRepo;
+    private  MenuRepo menuRepo;
 
-    public MenuService(MenuRepo menuRepo) {
-        this.menuRepo = menuRepo;
-    }
+
 
     @Override
     public Menu saveMenu(Menu menu) {

@@ -1,16 +1,17 @@
 package tn.esprit.arctic.demo1.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.demo1.entities.DetailComposant;
 import tn.esprit.arctic.demo1.repositories.DetailComposantRepo;
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class DetailComposantService implements IDetailComposantService {
 
-    private final DetailComposantRepo detailComposantRepo;
+    private  DetailComposantRepo detailComposantRepo;
 
-    public DetailComposantService(DetailComposantRepo detailComposantRepo) {
-        this.detailComposantRepo = detailComposantRepo;
-    }
+
 
     @Override
     public DetailComposant saveDetailComposant(DetailComposant detailComposant) {

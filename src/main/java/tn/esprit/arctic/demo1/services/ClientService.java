@@ -1,9 +1,13 @@
 package tn.esprit.arctic.demo1.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.demo1.entities.Client;
 import tn.esprit.arctic.demo1.repositories.ClientRepo;
 
 import java.util.List;
+@Service
+@AllArgsConstructor
 
 public class ClientService implements IClientService {
      ClientRepo clientRepo;
